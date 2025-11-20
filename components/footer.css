@@ -1,0 +1,82 @@
+.footer-container1 {
+  display: contents;
+}
+ 
+.footer-container2 {
+  display: none;
+}
+ 
+.footer-container3 {
+  display: contents;
+}
+ 
+.footer-footer-badge-icon1 {
+  color: var(--color-on-surface);
+  width: 28px;
+  height: 28px;
+}
+ 
+.footer-footer-badge-small1 {
+  color: var(--color-on-surface-secondary);
+  font-size: 10px;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+ 
+.footer-footer-badge-large1 {
+  color: var(--color-on-surface);
+  font-size: 16px;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+ 
+.footer-footer-badge-icon2 {
+  color: var(--color-on-surface);
+  width: 28px;
+  height: 28px;
+}
+ 
+.footer-footer-badge-small2 {
+  color: var(--color-on-surface-secondary);
+  font-size: 10px;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+ 
+.footer-footer-badge-large2 {
+  color: var(--color-on-surface);
+  font-size: 16px;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+ 
+.footer-footer-back-to-top-glow {
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  transition: opacity 0.3s var(--animation-curve-primary);
+}
+ 
+.footer-container4 {
+  display: none;
+}
+ 
+.footer-container5 {
+  display: contents;
+}
+ 
+.footer-container6 {
+  display: none;
+}
+ 
+.footer-container7 {
+  display: contents;
+}

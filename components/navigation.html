@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>oopskit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: undefined;
+        text-transform: undefined;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--color-on-surface);
+        background: var(--color-surface);
+
+        fill: var(--color-on-surface);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="../style.css" />
+    <div>
+      <link href="./navigation.css" rel="stylesheet" />
+      <div class="navigation-container1">
+        <div class="navigation-container2">
+          <div class="navigation-container3">
+            <style>
+              @media (prefers-reduced-motion: reduce) {
+              .navigation-wrapper, .navigation-link, .navigation-link-underline, .navigation-cta, .navigation-toggle, .navigation-overlay, .navigation-mobile-link {
+                animation: none !important;
+                transition: none !important;
+              }
+              }
+            </style>
+          </div>
+        </div>
+        <nav
+          id="navigation"
+          role="navigation"
+          aria-label="메인 내비게이션"
+          class="navigation-wrapper"
+        >
+          <div class="navigation-container">
+            <a href="#">
+              <div aria-label="OopsKit 홈페이지" class="navigation-logo">
+                <div class="navigation-logo-icon">
+                  <div class="navigation-logo-glow"></div>
+                  <span class="navigation-logo-text">Oops</span>
+                  <span class="navigation-logo-accent">Kit</span>
+                </div>
+              </div>
+            </a>
+            <div id="navLinks" class="navigation-links">
+              <a href="#features">
+                <div class="navigation-link">
+                  <span class="navigation-link-text">주요 기능</span>
+                  <span class="navigation-link-underline"></span>
+                </div>
+              </a>
+              <a href="#how-it-works">
+                <div class="navigation-link">
+                  <span class="navigation-link-text">작동 방식</span>
+                  <span class="navigation-link-underline"></span>
+                </div>
+              </a>
+              <a href="#testimonials">
+                <div class="navigation-link">
+                  <span class="navigation-link-text">사용자 후기</span>
+                  <span class="navigation-link-underline"></span>
+                </div>
+              </a>
+              <a href="#faq">
+                <div class="navigation-link">
+                  <span class="navigation-link-text">자주 묻는 질문</span>
+                  <span class="navigation-link-underline"></span>
+                </div>
+              </a>
+            </div>
+            <div class="navigation-actions">
+              <a
+                href="https://apps.apple.com/kr/app/oopskit/id6752884289"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <div
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  class="navigation-cta"
+                >
+                  <span class="navigation-cta-icon">
+                    <svg
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="18"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 15V3m9 12v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                        ></path>
+                        <path d="m7 10l5 5l5-5"></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="navigation-cta-text">앱 다운로드</span>
+                  <span class="navigation-cta-glow"></span>
+                </div>
+              </a>
+            </div>
+            <button
+              id="navToggle"
+              aria-label="메뉴 열기"
+              aria-controls="navLinks"
+              aria-expanded="false"
+              class="navigation-toggle"
+            >
+              <span class="navigation-navigation-toggle-icon">
+                <svg
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="navigation-navigation-toggle-menu"
+                >
+                  <path
+                    d="M4 5h16M4 12h16M4 19h16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+                ><svg
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="navigation-navigation-toggle-close"
+                >
+                  <path
+                    d="M18 6L6 18M6 6l12 12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div id="navOverlay" class="navigation-overlay">
+            <div class="navigation-mobile">
+              <a href="#features">
+                <div class="navigation-mobile-link">
+                  <span class="navigation-mobile-number">01</span>
+                  <span class="navigation-mobile-text">주요 기능</span>
+                </div>
+              </a>
+              <a href="#how-it-works">
+                <div class="navigation-mobile-link">
+                  <span class="navigation-mobile-number">02</span>
+                  <span class="navigation-mobile-text">작동 방식</span>
+                </div>
+              </a>
+              <a href="#testimonials">
+                <div class="navigation-mobile-link">
+                  <span class="navigation-mobile-number">03</span>
+                  <span class="navigation-mobile-text">사용자 후기</span>
+                </div>
+              </a>
+              <a href="#faq">
+                <div class="navigation-mobile-link">
+                  <span class="navigation-mobile-number">04</span>
+                  <span class="navigation-mobile-text">자주 묻는 질문</span>
+                </div>
+              </a>
+              <div class="navigation-mobile-cta">
+                <a
+                  href="https://apps.apple.com/kr/app/oopskit/id6752884289"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <div
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="btn btn-lg btn-primary"
+                  >
+                    <span>앱 다운로드</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="navigation-container4">
+          <div class="navigation-container5">
+            <style>
+                      @keyframes navigation-scan {0%,100% {opacity: 0.6;}
+              50% {opacity: 1;}}@keyframes navigation-pulse {0%,100% {opacity: 0.4;}
+              50% {opacity: 0.7;}}@keyframes navigation-slide-in {to {transform: translateX(0);
+              opacity: 1;}}@keyframes navigation-slide-up {to {transform: translateY(0);
+              opacity: 1;}}
+            </style>
+          </div>
+        </div>
+        <div class="navigation-container6">
+          <div class="navigation-container7">
+            <script defer="" data-name="navigation">
+              document.addEventListener('DOMContentLoaded', function() {
+                (function(){
+                  const navToggle = document.getElementById("navToggle")
+                  const navOverlay = document.getElementById("navOverlay")
+                  const navLinks = document.querySelectorAll(".navigation-mobile-link")
+
+                  if (navToggle && navOverlay) {
+                    navToggle.addEventListener("click", () => {
+                      const isExpanded = navToggle.getAttribute("aria-expanded") === "true"
+                      navToggle.setAttribute("aria-expanded", !isExpanded)
+                      navOverlay.classList.toggle("navigation-active")
+                      document.body.style.overflow = !isExpanded ? "hidden" : ""
+                    })
+
+                    // Close mobile menu when clicking a link
+                    navLinks.forEach((link) => {
+                      link.addEventListener("click", () => {
+                        navToggle.setAttribute("aria-expanded", "false")
+                        navOverlay.classList.remove("navigation-active")
+                        document.body.style.overflow = ""
+                      })
+                    })
+
+                    // Close mobile menu when clicking overlay
+                    navOverlay.addEventListener("click", (e) => {
+                      if (e.target === navOverlay) {
+                        navToggle.setAttribute("aria-expanded", "false")
+                        navOverlay.classList.remove("navigation-active")
+                        document.body.style.overflow = ""
+                      }
+                    })
+                  }
+
+                  // Add scroll effect to navigation
+                  let lastScroll = 0
+                  const nav = document.getElementById("navigation")
+
+                  if (nav) {
+                    window.addEventListener("scroll", () => {
+                      const currentScroll = window.pageYOffset
+
+                      if (currentScroll > 100) {
+                        nav.style.boxShadow =
+                          "0 4px 24px color-mix(in srgb, var(--color-surface) 80%, transparent)"
+                      } else {
+                        nav.style.boxShadow = "none"
+                      }
+
+                      lastScroll = currentScroll
+                    })
+                  }
+                })()
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

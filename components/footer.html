@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>oopskit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 1rem;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: undefined;
+        text-transform: undefined;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--color-on-surface);
+        background: var(--color-surface);
+
+        fill: var(--color-on-surface);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="../style.css" />
+    <div>
+      <link href="./footer.css" rel="stylesheet" />
+      <div class="footer-container1">
+        <div class="footer-container2">
+          <div class="footer-container3">
+            <style>
+              @media (prefers-reduced-motion: reduce) {
+              .footer-scanlines, .footer-particle, .footer-logo-glow, .footer-divider-pulse {
+                animation: none;
+              }
+              .footer-section *, .footer-section *::before, .footer-section *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+              }
+              }
+            </style>
+          </div>
+        </div>
+        <footer id="footer-oopskit" class="footer-section">
+          <div aria-hidden="true" class="footer-grid-bg"></div>
+          <div aria-hidden="true" class="footer-scanlines"></div>
+          <div aria-hidden="true" class="footer-particles">
+            <div class="footer-particle"></div>
+            <div class="footer-particle"></div>
+            <div class="footer-particle"></div>
+            <div class="footer-particle"></div>
+            <div class="footer-particle"></div>
+            <div class="footer-particle"></div>
+          </div>
+          <div class="footer-container">
+            <div class="footer-content">
+              <div class="footer-brand">
+                <div class="footer-logo-wrapper">
+                  <div aria-hidden="true" class="footer-logo-glow"></div>
+                  <div class="footer-brand-icon">
+                    <svg
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M12 6v6l4 2"></path>
+                        <circle r="10" cx="12" cy="12"></circle>
+                      </g>
+                    </svg>
+                  </div>
+                  <h3 class="footer-brand-name">OopsKit</h3>
+                </div>
+                <p class="footer-tagline">시간을 역산하는 준비 관리 앱</p>
+                <p class="footer-description">
+                  도착 시각만 알려주세요. OopsKit이 준비 시작 시간을
+                  역산해드립니다.
+                </p>
+                <div class="footer-download-section">
+                  <a
+                    href="https://apps.apple.com/kr/app/oopskit/id6752884289"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <div
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      aria-label="App Store에서 다운로드"
+                      class="footer-store-badge"
+                    >
+                      <span aria-hidden="true" class="footer-badge-glow"></span>
+                      <span class="footer-badge-content">
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          class="footer-footer-badge-icon1"
+                        >
+                          <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="footer-badge-text">
+                        <span class="footer-footer-badge-small1">
+                          Download on the
+                        </span>
+                        <span class="footer-footer-badge-large1">
+                          App Store
+                        </span>
+                      </span>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div
+                      aria-label="Google Play에서 다운로드"
+                      class="footer-store-badge"
+                    >
+                      <span aria-hidden="true" class="footer-badge-glow"></span>
+                      <span class="footer-badge-content">
+                        <svg
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          class="footer-footer-badge-icon2"
+                        >
+                          <path
+                            d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="footer-badge-text">
+                        <span class="footer-footer-badge-small2">
+                          GET IT ON
+                        </span>
+                        <span class="footer-footer-badge-large2">
+                          Google Play
+                        </span>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="footer-links-group">
+                <div class="footer-links-column">
+                  <h4 class="footer-column-title">제품</h4>
+                  <ul class="footer-links-list">
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>주요 기능</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>사용 방법</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>업데이트</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>로드맵</span></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-links-column">
+                  <h4 class="footer-column-title">지원</h4>
+                  <ul class="footer-links-list">
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>도움말 센터</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>사용 가이드</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>FAQ</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>문의하기</span></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-links-column">
+                  <h4 class="footer-column-title">회사</h4>
+                  <ul class="footer-links-list">
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>소개</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>블로그</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>채용</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>파트너</span></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-contact">
+                <h4 class="footer-column-title">문의</h4>
+                <div class="footer-contact-items">
+                  <a href="mailto:support@oopskit.com?subject=">
+                    <div class="footer-contact-item">
+                      <span class="footer-contact-icon">
+                        <svg
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
+                            ></path>
+                            <rect
+                              x="2"
+                              y="4"
+                              rx="2"
+                              width="20"
+                              height="16"
+                            ></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <span class="footer-contact-text">
+                        support@oopskit.com
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="footer-social">
+                  <h5 class="footer-social-title">팔로우하기</h5>
+                  <div class="footer-social-links">
+                    <a href="#">
+                      <div
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="Instagram"
+                        class="footer-social-link"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="footer-social-glow"
+                        ></span>
+                        <svg
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <rect
+                              x="2"
+                              y="2"
+                              rx="5"
+                              ry="5"
+                              width="20"
+                              height="20"
+                            ></rect>
+                            <path
+                              d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="Twitter"
+                        class="footer-social-link"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="footer-social-glow"
+                        ></span>
+                        <svg
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="YouTube"
+                        class="footer-social-link"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="footer-social-glow"
+                        ></span>
+                        <svg
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24"
+                          viewBox="0 0 24 24"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M2.5 17a24.1 24.1 0 0 1 0-10a2 2 0 0 1 1.4-1.4a49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.1 24.1 0 0 1 0 10a2 2 0 0 1-1.4 1.4a49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+                            ></path>
+                            <path d="m10 15l5-3l-5-3z"></path>
+                          </g>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div aria-hidden="true" class="footer-divider">
+              <div class="footer-divider-line"></div>
+              <div class="footer-divider-pulse"></div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-bottom-content">
+                <div class="footer-legal">
+                  <a href="#">
+                    <div class="footer-legal-link">
+                      <svg
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+                          ></path>
+                          <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                        </g>
+                      </svg>
+                      <span>이용약관</span>
+                    </div>
+                  </a>
+                  <span aria-hidden="true" class="footer-legal-separator">
+                    |
+                  </span>
+                  <a href="#">
+                    <div class="footer-legal-link">
+                      <svg
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <span>개인정보처리방침</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="footer-copyright">
+                  <p class="footer-copyright-text">
+                    © 2025 OopsKit. All rights reserved.
+                  </p>
+                </div>
+                <button
+                  id="footer-back-to-top-btn"
+                  aria-label="맨 위로 이동"
+                  class="footer-back-to-top"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="footer-footer-back-to-top-glow"
+                  ></span>
+                  <svg
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="m5 12l7-7l7 7m-7 7V5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="footer-container4">
+          <div class="footer-container5">
+            <style>
+                      @keyframes footer-scanline-move {0% {transform: translateY(0);}
+              100% {transform: translateY(60px);}}@keyframes footer-particle-float {0%,100% {opacity: 0;
+              transform: translateY(100%) scale(0.5);}
+              10%,90% {opacity: 0.8;}
+              50% {opacity: 1;
+              transform: translateY(-100vh) scale(1);}}@keyframes footer-logo-pulse {0%,100% {opacity: 0.4;
+              transform: scale(0.95);}
+              50% {opacity: 0.8;
+              transform: scale(1.05);}}@keyframes footer-divider-pulse-move {0%,100% {left: 0;
+              opacity: 0;}
+              10%,90% {opacity: 1;}
+              50% {left: calc(100% - 200px);}}
+            </style>
+          </div>
+        </div>
+        <div class="footer-container6">
+          <div class="footer-container7">
+            <script defer="" data-name="footer-oopskit">
+              document.addEventListener('DOMContentLoaded', function() {
+                (function(){
+                  // Back to Top Button Functionality
+                  const backToTopBtn = document.getElementById("footer-back-to-top-btn")
+
+                  if (backToTopBtn) {
+                    backToTopBtn.addEventListener("click", function () {
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      })
+                    })
+
+                    // Show/hide button based on scroll position (for mobile fixed button)
+                    let scrollTimeout
+                    window.addEventListener(
+                      "scroll",
+                      function () {
+                        clearTimeout(scrollTimeout)
+
+                        if (window.innerWidth <= 767) {
+                          if (window.scrollY > 300) {
+                            backToTopBtn.style.opacity = "1"
+                            backToTopBtn.style.visibility = "visible"
+                          } else {
+                            backToTopBtn.style.opacity = "0"
+                            backToTopBtn.style.visibility = "hidden"
+                          }
+                        }
+                      },
+                      { passive: true }
+                    )
+                  }
+
+                  // Enhanced Link Tracking (optional)
+                  const footerLinks = document.querySelectorAll(
+                    ".footer-link, .footer-legal-link, .footer-social-link"
+                  )
+
+                  footerLinks.forEach((link) => {
+                    link.addEventListener("click", function (e) {
+                      const linkText =
+                        this.textContent.trim() || this.getAttribute("aria-label")
+                      console.log("Footer link clicked:", linkText)
+                    })
+                  })
+
+                  // Store Badge Click Tracking
+                  const storeBadges = document.querySelectorAll(".footer-store-badge")
+
+                  storeBadges.forEach((badge) => {
+                    badge.addEventListener("click", function (e) {
+                      const store = this.href.includes("apple") ? "App Store" : "Google Play"
+                      console.log("Download badge clicked:", store)
+                    })
+                  })
+                })()
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
