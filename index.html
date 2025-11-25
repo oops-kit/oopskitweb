@@ -50,7 +50,7 @@
                         </svg>
                         <span>iOS</span>
                     </a>
-                    <a href="#" target="_blank" class="store-badge">
+                    <a href="#" class="store-badge" id="android-hero-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path
                                 d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z" />
@@ -223,7 +223,7 @@
                         <div class="badge-large">App Store</div>
                     </div>
                 </a>
-                <a href="#" target="_blank" class="download-badge">
+                <a href="#" class="download-badge" id="android-download-btn">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z" />
@@ -300,9 +300,22 @@
         </div>
     </footer>
 
+    <!-- Android Coming Soon Modal -->
+    <div id="android-modal" class="modal">
+        <div class="modal-content">
+            <h3 class="modal-title">아직 준비 중이에요!</h3>
+            <p class="modal-text">
+                OopsKit 안드로이드 버전은<br>
+                <strong>2025년 12월 출시 예정</strong>입니다.
+            </p>
+            <p class="modal-text">조금만 기다려주세요 😊</p>
+            <button class="modal-close-btn">닫기</button>
+        </div>
+    </div>
+
     <script>
-        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function () {
+            // Mobile menu toggle
             const navToggle = document.querySelector('.navigation-toggle');
             const navLinks = document.querySelector('.navigation-links');
 
@@ -312,6 +325,53 @@
                     navToggle.classList.toggle('active');
                 });
             }
+
+            // Android modal
+            const modal = document.getElementById('android-modal');
+            const androidHeroBtn = document.getElementById('android-hero-btn');
+            const androidDownloadBtn = document.getElementById('android-download-btn');
+            const closeBtn = document.querySelector('.modal-close-btn');
+
+            // 안드로이드 버튼 클릭 시 모달 열기
+            function openModal(e) {
+                e.preventDefault();
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // 스크롤 방지
+            }
+
+            // 모달 닫기
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // 스크롤 복원
+            }
+
+            if (androidHeroBtn) {
+                androidHeroBtn.addEventListener('click', openModal);
+            }
+
+            if (androidDownloadBtn) {
+                androidDownloadBtn.addEventListener('click', openModal);
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            // 모달 외부 클릭 시 닫기
+            if (modal) {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+
+            // ESC 키로 모달 닫기
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
         });
     </script>
 </body>
