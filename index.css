@@ -249,9 +249,7 @@ body {
 
 .phone-screen {
   width: 100%;
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
 }
 
 .phone-screen img {
@@ -314,9 +312,7 @@ body {
 }
 
 .feature-device {
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
 }
 
 .feature-device img {
